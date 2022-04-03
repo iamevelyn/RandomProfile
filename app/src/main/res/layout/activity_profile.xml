@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/app_name"
+    android:fillViewport="true"
+    tools:context=".activities.Profile">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_principal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btRandom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_below="@+id/layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_profileimage"
+                        android:layout_width="150dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="150dp"
+                        android:padding="7dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle">
+
+                        <ImageView
+                            android:id="@+id/ivprofile_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/layout_image"
+                    android:id="@+id/layout_userInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Hi, Mrs. Evelyn"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-black"/>
+
+
+                    <TextView
+                        android:id="@+id/tvAge"
+                        android:layout_below="@+id/tv_lastName"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:text="20 Años"/>
+
+                    <TextView
+                        android:id="@+id/tvSex"
+                        android:layout_below="@+id/tvAge"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:text="Femenino"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_birth"
+                android:layout_below="@+id/layout_User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/ivBirthday"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top"
+                        android:background="@drawable/birthday" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvBirthday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextView"
+                            android:text="@string/string_birthday" />
+
+
+                        <TextView
+                            android:id="@+id/etBirthday"
+                            style="@style/EditTextInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="23-11-1994" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_UserName"
+                android:layout_below="@+id/layout_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+
+
+                    <ImageView
+                        android:id="@+id/ivUser"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top"
+                        android:background="@drawable/user"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout2_UserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:id="@+id/tvuser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextView"
+                            android:text="@string/string_user" />
+
+
+                        <TextView
+                            android:id="@+id/etUser"
+                            style="@style/EditTextInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="eve.lyn"/>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_password"
+                android:layout_below="@+id/layout_User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/ivpassword"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top"
+                        android:background="@drawable/password"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout2_password"
+                        android:layout_below="@+id/ivpassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:id="@+id/tvpassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextView"
+                            android:text="@string/string_password" />
+
+
+                        <TextView
+                            android:id="@+id/etpassword"
+                            style="@style/EditTextInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="eve.lyn"/>
+
+
+
+                    </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_phone"
+                android:layout_below="@+id/layout_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivphone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/phone"/>
+
+                <LinearLayout
+                    android:id="@+id/layout2_phone"
+                    android:layout_below="@+id/ivphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="left">
+
+                    <TextView
+                        android:id="@+id/tvphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView"
+                        android:text="@string/string_phone" />
+
+
+                    <TextView
+                        android:id="@+id/etphone"
+                        style="@style/EditTextInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="52 5555 5555 55"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_phone2"
+                android:layout_below="@+id/layout_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivphone2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/phone"/>
+
+                <LinearLayout
+                    android:id="@+id/layout2_phone2"
+                    android:layout_below="@+id/ivphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="left">
+
+                    <TextView
+                        android:id="@+id/tvphone2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView"
+                        android:text="@string/string_phone" />
+
+
+                    <TextView
+                        android:id="@+id/etphone2"
+                        style="@style/EditTextInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="52 5555 5555 55"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mail"
+                android:layout_below="@+id/layout_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivmail"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/mail"/>
+
+                <LinearLayout
+                    android:id="@+id/layout2_mail"
+                    android:layout_below="@+id/ivphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="left">
+
+                    <TextView
+                        android:id="@+id/tvmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView"
+                        android:text="@string/string_mail" />
+
+
+                    <TextView
+                        android:id="@+id/etmail"
+                        style="@style/EditTextInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hola@gmail.com"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_location"
+                android:layout_below="@+id/layout_Contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="20dp">
+
+
+                <ImageView
+                    android:id="@+id/ivlocation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/direction"/>
+
+                <LinearLayout
+                    android:id="@+id/layout2_location"
+                    android:layout_below="@+id/ivlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="left">
+
+                    <TextView
+                        android:id="@+id/tvdirection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView"
+                        android:text="@string/string_direction" />
+
+                    <LinearLayout
+                        android:id="@+id/layout3_direction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tvstreet_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView"
+                        android:text="@string/string_street_number" />
+
+                    <TextView
+                        android:id="@+id/etstreet_number"
+                        style="@style/EditTextInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hola@gmail.com"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_part1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_direction"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+
+
+                            <TextView
+                                android:id="@+id/tvcity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView"
+                                android:text="@string/string_city" />
+
+
+                            <TextView
+                                android:id="@+id/etcity"
+                                style="@style/EditTextInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hola@gmail.com"/>
+
+
+                            <TextView
+                                android:id="@+id/tvstate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView"
+                                android:text="@string/string_state" />
+
+                            <TextView
+                            android:id="@+id/etstate"
+                            style="@style/EditTextInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hola@gmail.com"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_part2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:id="@+id/tvpostcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextView"
+                            android:text="@string/string_postcode" />
+
+
+                        <TextView
+                            android:id="@+id/etpostcode"
+                            style="@style/EditTextInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hola@gmail.com"/>
+
+
+                        <TextView
+                            android:id="@+id/tvcontry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TextView"
+                            android:text="@string/string_country" />
+
+
+                        <TextView
+                            android:id="@+id/etcountry"
+                            style="@style/EditTextInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="México"/>
+                    </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_below="@+id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivimageRandom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/incognito" />
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
